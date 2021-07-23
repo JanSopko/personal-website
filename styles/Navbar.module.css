@@ -1,0 +1,7 @@
+.custom-navbar {
+    height: 100px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
