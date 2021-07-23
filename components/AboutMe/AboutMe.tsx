@@ -18,7 +18,7 @@ export const AboutMe = () => {
                 <section className="about-me-content">
                 {/*<Image src={myPicture} alt="Photo of the author" height={200} width={150} id="photo"/>*/}
                     <figure id="photo">
-                        <img src="https://gitlab.i.etech.sk/uploads/-/system/user/avatar/230/avatar.png?width=90" alt="Photo of the author"/>
+                        {/*<img src="https://gitlab.i.etech.sk/uploads/-/system/user/avatar/230/avatar.png?width=90" alt="Photo of the author"/>*/}
                     </figure>
                     {/*<div id="photo" />*/}
                     blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne

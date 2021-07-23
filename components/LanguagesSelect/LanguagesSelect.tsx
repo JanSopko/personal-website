@@ -10,6 +10,7 @@ import {
 import {languagesList, languages} from "../../language-config/languages.list";
 import {LanguagesEnum} from "../../language-config/languages.enum";
 import IconButton from '@material-ui/core/IconButton';
+import Image from "next/image";
 
 export const LanguagesSelect = (props: {
     currentLanguage: LanguagesEnum,
@@ -37,7 +38,8 @@ export const LanguagesSelect = (props: {
                     languages.map(lang => (
                         <MenuItem value={lang.short} key={lang.short}>
                             <IconButton>
-                                <img src={lang.flagUrl} alt={`${lang.short}-flag`} height={20} width={20}/>
+                                {/*<img src={lang.flagUrl} alt={`${lang.short}-flag`} height={20} width={20}/>*/}
+
                             </IconButton>
                             {lang.full}
                         </MenuItem>
