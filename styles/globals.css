@@ -1,6 +1,7 @@
 html,
 body {
   --page-padding: 80px;
+  --page-padding-mobile: 25px;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -218,6 +219,10 @@ a {
 }
 
 @media only screen and (max-width: 760px) {
+  .content {
+    padding: 0 var(--page-padding-mobile);
+  }
+
   #info-box {
     flex-direction: row;
   }
