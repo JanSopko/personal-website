@@ -28,7 +28,7 @@ export const LanguagesSelect = (props: {
     }
 
     return(
-            <FormControl>
+            <FormControl id="lang-select-form">
             <InputLabel
                 shrink
                 id={LANGUAGE_LABEL}

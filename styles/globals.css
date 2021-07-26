@@ -255,6 +255,23 @@ a {
     display: grid;
     grid-template-columns: 1fr;
   }
+
+  #lang-select-form {
+    margin-top: 1.2rem;
+    width: 100%;
+  }
+
+  #icons-container {
+    width: 100%;
+  }
+
+  #custom-navbar {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
 }
 
 
