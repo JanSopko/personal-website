@@ -4,7 +4,7 @@ import Head from "next/head";
 export const CustomHead = () => {
     return(
         <Head>
-            <title>Ján Sopko | Welcome</title>
+            <title>Ján Sopko</title>
             <meta name="description" content="Personal website of Ján Sopko" />
             <link rel="icon" href="/favi.png" />
         </Head>

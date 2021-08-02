@@ -10,6 +10,8 @@ import {InfoBox} from "../components/InfoBox/InfoBox";
 import {AboutMe} from "../components/AboutMe/AboutMe";
 import {ContactForm} from "../components/ContactForm/ContactForm";
 import {SkillsList} from "../components/Skills/SkillsList";
+import {SkillType} from "../components/Skills/SkillType";
+import {SkillsUL} from "../components/Skills/SkillsUL";
 
 
 const useStyles = makeStyles({
@@ -34,7 +36,8 @@ export default function Home(props: {
                 <Navbar currentLanguage={language} setLanguage={props.setLanguage}/>
               </div>
               <AboutMe />
-              <SkillsList />
+              <SkillsUL/>
+              {/*<SkillsList />*/}
               <ContactForm />
 
           {/*<InfoBox />*/}

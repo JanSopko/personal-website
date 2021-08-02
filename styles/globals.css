@@ -2,6 +2,7 @@ html,
 body {
   --page-padding: 80px;
   --page-padding-mobile: 25px;
+  --contact-form-min-height: 260px;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -20,6 +21,10 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.custom-button {
+  border: 1px solid #848484;
 }
 
 #navbar-container {
@@ -127,6 +132,11 @@ a {
   background-color: #ddeaff;
   padding: 20px;
   margin: 20px 0 20px 0;
+  min-height: var(--contact-form-min-height);
+}
+
+.contact-form-submitted {
+  background-color: #edfff1 !important;
 }
 
 .contact-input {
@@ -152,6 +162,11 @@ a {
   /*min-width: 120px;*/
   float: left;
   margin: 0 15px 15px 0;
+
+}
+
+#photo > div {
+  border: 2px solid black;
 }
 
 #photo > img:hover {
@@ -177,7 +192,10 @@ a {
 }
 
 .about-me-content {
-  /*display: flex;*/
+  box-shadow: 3px 3px 8px 5px #e7e7e7;
+  overflow: hidden;
+  padding: .5rem;
+  margin-bottom: 1rem;
 }
 
 #skills-list {
@@ -217,6 +235,11 @@ a {
 @media only screen and (max-width: 760px) {
   .content {
     padding: 0 var(--page-padding-mobile);
+  }
+
+  .about-me-content {
+    box-shadow: none;
+    padding: 0;
   }
 
   #info-box {

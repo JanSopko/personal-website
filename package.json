@@ -15,8 +15,10 @@
   "dependencies": {
     "@material-ui/core": "^4.12.1",
     "@material-ui/icons": "^4.11.2",
+    "axios": "^0.21.1",
     "material-ui-flags": "^1.2.4",
     "next": "11.0.1",
+    "nodemailer": "^6.6.3",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },

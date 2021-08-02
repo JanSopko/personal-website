@@ -1,16 +1,18 @@
 import React, {useContext} from 'react';
+import {AboutMeSection} from "./AboutMeSection";
 import {mainHeadingSection} from "../../models/MainHeading/MainHeading";
+import {aboutMeSection} from "../../models/AboutMe/AboutMe";
 import {LanguageContext} from "../../pages/_app";
 import Image from "next/image";
 import myPicture from '../../public/img/sopi.jpg';
 
-
 export const AboutMe = () => {
     const language = useContext(LanguageContext);
+    const {aboutMe, experience, education, freeTime} = aboutMeSection[language].bio;
 
     return(
         // <div className="about-section">
-            <div className="content">
+            <div className="content about-me">
                 <h1>
                     {mainHeadingSection[language].text}
                 </h1>
@@ -26,22 +28,10 @@ export const AboutMe = () => {
                         />
                     </figure>
                     {/*<div id="photo" />*/}
-                    blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne
-                    blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne
-                    blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne
-                    blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne
-                    blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne
-                    {/*blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne*/}
-                    {/*blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne*/}
-                    {/*blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne*/}
-                    {/*blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne*/}
-                    {/*blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne*/}
-                    {/*blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne*/}
-                    {/*blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne*/}
-                    {/*blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne*/}
-                    {/*blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne*/}
-                    {/*blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne*/}
-                    {/*blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne blablabla text o mne*/}
+                    <AboutMeSection content={aboutMe} />
+                    <AboutMeSection content={experience} />
+                    <AboutMeSection content={education} />
+                    <AboutMeSection content={freeTime} />
                 </section>
             </div>
         // </div>
