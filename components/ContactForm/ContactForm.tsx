@@ -24,7 +24,7 @@ export const ContactForm = () => {
     const formClassName = submitted ? "contact-form-submitted" : "contact-form";
 
     const sendForm = (email: string, textMessage: string) => {
-        // axios.post('/api/sendMail', {email, textMessage});
+        axios.post('/api/sendMail', {email, textMessage});
         if (!isValidEmail()) {
             setCurrentEmailLabel(emailNotValid);
             setEmailValid(false);

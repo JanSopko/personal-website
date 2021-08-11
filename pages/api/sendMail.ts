@@ -12,19 +12,18 @@ export default function handler (
     const myReceiverEmailAddress = mySenderEmailAddress;
 
     const fullMessage = `${email} Vám posiela správu: ${textMessage}`;
-
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
             user: mySenderEmailAddress,
-            pass: process.env.SMTP_APP_PASSWORD || 'zdxxjmjlpqzveyrn'
+            pass: process.env.SMTP_APP_PASSWORD
         }
     });
 
     const mailOptions = {
         from: mySenderEmailAddress,
         to: myReceiverEmailAddress,
-        subject: 'Sending Email using Node.js',
+        subject: 'Email from personal website',
         text: fullMessage
     };
 
