@@ -97,15 +97,6 @@ a {
   background-color: #54a2ff;
 }
 
-.option-active {
-  background-color: var(--info-box-bgcolor);
-  border-bottom: 1px solid var(--info-box-bgcolor) !important;
-  border-right: 2px solid black !important;
-  border-left: 2px solid black !important;
-  border-top: 2px solid black !important;
-  color: #0070f3;
-}
-
 .option-active:hover {
   background-color: var(--info-box-bgcolor) !important;
 }
@@ -193,8 +184,9 @@ a {
 
 .about-me-content {
   box-shadow: 3px 3px 8px 5px #e7e7e7;
+  border-radius: .7rem;
   overflow: hidden;
-  padding: .5rem;
+  padding: 1rem;
   margin-bottom: 1rem;
 }
 

@@ -19,7 +19,9 @@ export const ContactForm = () => {;
     const formClassName = submitted ? "contact-form-submitted" : "contact-form";
 
     useEffect(() => {
-        setCurrentEmailLabel(contactFormSection[language].emailNotValid);
+        if (!emailValid) {
+            setCurrentEmailLabel(contactFormSection[language].emailNotValid);
+        }
     }, [language]);
 
     const sendForm = (email: string, textMessage: string) => {
