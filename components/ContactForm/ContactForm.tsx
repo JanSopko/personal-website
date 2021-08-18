@@ -1,18 +1,13 @@
-import React, {useContext, useState} from "react";
-import {Container, FormControl, InputLabel, TextField, TextareaAutosize, Button, makeStyles} from "@material-ui/core";
+import React, {useContext, useEffect, useState} from "react";
+import { FormControl, TextField, TextareaAutosize, Button } from "@material-ui/core";
 import {contactFormSection} from "../../models/ContactForm/ContactForm";
 import {LanguageContext} from "../../pages/_app";
 import {Submitted} from "./Submitted";
-import axios from "axios";
+import {sendMail} from "../../pages/api/calls/sendMail";
+import {isValidEmail} from "../../utils/functions/isValidEmail";
 
-const useStyles = makeStyles({
-    customButton: {
-        border: "1px solid #848484"
-    }
-});
 
-export const ContactForm = () => {
-    const classes = useStyles();
+export const ContactForm = () => {;
 
     const language = useContext(LanguageContext);
     const {emailLabel, placeholder, buttonSend, contactMeHeading, emailNotValid} = contactFormSection[language];
@@ -23,12 +18,16 @@ export const ContactForm = () => {
     const [submitted, setSubmitted] = useState<boolean>(false);
     const formClassName = submitted ? "contact-form-submitted" : "contact-form";
 
+    useEffect(() => {
+        setCurrentEmailLabel(contactFormSection[language].emailNotValid);
+    }, [language]);
+
     const sendForm = (email: string, textMessage: string) => {
-        axios.post('/api/sendMail', {email, textMessage});
-        if (!isValidEmail()) {
+        if (!isValidEmail(email)) {
             setCurrentEmailLabel(emailNotValid);
             setEmailValid(false);
         } else {
+            sendMail(email, textMessage);
             setSubmitted(true);
             setEmailValid(true);
             setCurrentEmailLabel(emailLabel);
@@ -37,12 +36,7 @@ export const ContactForm = () => {
         }
     }
 
-    const isValidEmail = (): boolean => {
-        return !!email;
-    }
-
     return(
-        // <Container>
             <div className="content">
                 <FormControl id="contact-form" className={formClassName}>
                 {
@@ -79,6 +73,5 @@ export const ContactForm = () => {
                 }
                 </FormControl>
             </div>
-        // </Container>
     );
 }

@@ -30,8 +30,11 @@ export default function handler (
     transporter.sendMail(mailOptions, function(error: any, info: any){
         if (error) {
             console.log(error);
+            res.status(500);
+            res.end();
         } else {
             console.log('Email sent: ' + info.response);
+            res.status(200).json({success: true, errors: []});
         }
     });
 
