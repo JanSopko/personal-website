@@ -6,6 +6,7 @@ export const CustomHead = () => {
         <Head>
             <title>Ján Sopko</title>
             <meta name="description" content="Personal website of Ján Sopko" />
+            <meta name="keywords" content="developer, backend, frontend, full stack, node, javascript, typescript, react, php"/>
             <link rel="icon" href="/favi.png" />
         </Head>
     );

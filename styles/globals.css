@@ -232,6 +232,7 @@ a {
   .about-me-content {
     box-shadow: none;
     padding: 0;
+    border-radius: 0;
   }
 
   #info-box {
