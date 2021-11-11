@@ -1,12 +1,9 @@
 import React, {useContext} from "react";
-import styles from '../styles/Home.module.css'
 import {CustomHead} from "../components/CustomHead/CustomHead";
-import {mainHeadingSection} from "../models/MainHeading/MainHeading";
 import {LanguageContext} from "./_app";
-import {Fade, makeStyles, BottomNavigation, Slide} from "@material-ui/core";
+import {Fade, makeStyles} from "@material-ui/core";
 import {Navbar} from "../components/Navbar/Navbar";
 import {Footer} from "../components/Footer/Footer";
-import {InfoBox} from "../components/InfoBox/InfoBox";
 import {AboutMe} from "../components/AboutMe/AboutMe";
 import {ContactForm} from "../components/ContactForm/ContactForm";
 import {SkillsUL} from "../components/Skills/SkillsUL";

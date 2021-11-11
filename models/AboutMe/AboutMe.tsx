@@ -32,7 +32,7 @@ export const aboutMeSection: Section<AboutMe> = {
             },
             experience: {
                 label: 'Skúsenosti 👨‍💻',
-                text: 'Od roku 2019 pracujem v Ringier Axel Springer Communities (predtým Ringier Axel Springer SK as.) ' +
+                text: 'Od roku 2019 pracujem v spločnosti Ringier (predtým Ringier Axel Springer SK as.) ' +
                     'v Žiline, kde som sa dostal úspešným dokončením Azet PHP Academy na jar 2019. ' +
                     'Náplňou mojej práce je tvorba backendu, REST API, WebSocket API a občasné úpravy na frontende. ' +
                     'Podieľal som sa na vývoji projektov v PHP (Symfony / čisté PHP), Node.js (NestJS, ExpressJS), REST a WebSocket APIs podľa špecifikácií ' +
@@ -40,11 +40,13 @@ export const aboutMeSection: Section<AboutMe> = {
             },
             education: {
                 label: 'Vzdelanie 👨🏻‍🎓',
-                text: ''
+                text: 'V rokoch 2014 - 2019 som študoval na Fakulte riadenia a informatiky Žilinskej univerzity v Žiline, ' +
+                    'odkiaľ mám bakalársky titul z odboru informatika. V rokoch 2019 - 2021 som študoval odbor informatika ' +
+                    'na Fakulte elektrotechniky a informačných technológií Žilinskej univerzity v Žiline s dosiahnutím inžinierskeho titulu.'
             },
             freeTime: {
                 label: 'Koníčky 🎸',
-                text: ''
+                text: 'Vo voľnom čase sa venujem predovšetkým hudbe (hre na gitaru), posilňovaniu a relaxačnému programovaniu.'
             }
         }
     },
@@ -66,11 +68,13 @@ export const aboutMeSection: Section<AboutMe> = {
             },
             education: {
                 label: 'Education 👨🏻‍🎓',
-                text: ''
+                text: 'From 2014 to 2019 I studied at the Faculty of management and computer science of University of Žilina, ' +
+                    "where I graduated from with bachelor's title in the field of computer science. In 2021 I graduated from the Faculty of " +
+                    "electrical engineering and information technology of University of Žilina, receiving an engineer's title from the field of computer science."
             },
             freeTime: {
                 label: 'Hobbies 🎸',
-                text: ''
+                text: 'In my free time I like to listen to and play music (guitar), work out or program.'
             }
         }
     },
