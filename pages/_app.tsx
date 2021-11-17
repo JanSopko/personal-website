@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
       <LanguageContext.Provider value={language}>
         <div id="main-container">
-            <Component {...pageProps} setLanguage={setLanguage}/>
+            {/*<Component {...pageProps} setLanguage={setLanguage}/>*/}
         </div>
       </LanguageContext.Provider>
   );

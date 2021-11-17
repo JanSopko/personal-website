@@ -3,7 +3,6 @@ import {CustomHead} from "../components/CustomHead/CustomHead";
 import {LanguageContext} from "./_app";
 import {Fade, makeStyles} from "@material-ui/core";
 import {Navbar} from "../components/Navbar/Navbar";
-import {Footer} from "../components/Footer/Footer";
 import {AboutMe} from "../components/AboutMe/AboutMe";
 import {ContactForm} from "../components/ContactForm/ContactForm";
 import {SkillsUL} from "../components/Skills/SkillsUL";
@@ -33,10 +32,6 @@ export default function Home(props: {
               <AboutMe />
               <SkillsUL language={language}/>
               <ContactForm />
-
-              <div className="content">
-              </div>
-              <Footer />
           </div>
       </main>
               </Fade>
